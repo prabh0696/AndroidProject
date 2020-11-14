@@ -12,11 +12,16 @@
         android:layout_width="374dp"
         android:layout_height="511dp"
         android:layout_marginBottom="10dp"
+        android:background="#B9000000"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="#BA000000" />
+        app:layout_constraintStart_toStartOf="parent">
+
+    </ImageView>
+
+
 
     <ImageView
         android:id="@+id/loginicon"
@@ -29,7 +34,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/login" />
+        app:srcCompat="@drawable/login"
+        android:contentDescription="TODO">
+
+    </ImageView>
 
     <EditText
         android:id="@+id/Name"
@@ -45,7 +53,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginicon" />
+        app:layout_constraintTop_toBottomOf="@+id/loginicon"
+        android:autofillHints="">
+
+    </EditText>
 
     <EditText
         android:id="@+id/Email"
@@ -59,7 +70,10 @@
         android:textColorHint="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Name" />
+        app:layout_constraintTop_toBottomOf="@+id/Name"
+        android:autofillHints="">
+
+    </EditText>
 
     <EditText
         android:id="@+id/Password"
@@ -75,7 +89,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.12"
+        android:autofillHints="">
+
+    </EditText>
 
     <Button
         android:id="@+id/SignUp"
@@ -88,7 +105,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintTop_toBottomOf="@+id/Password" >
+
+    </Button>
 
     <TextView
         android:id="@+id/Text"
@@ -102,7 +121,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/Opacityimage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignUp"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0" >
+
+    </TextView>
 
     <TextView
         android:id="@+id/LoginLink"
@@ -117,7 +138,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/Opacityimage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignUp"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintVertical_bias="0.03" >
+
+    </TextView>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -127,6 +150,8 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/Opacityimage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" >
+
+    </ProgressBar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
