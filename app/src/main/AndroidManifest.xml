@@ -15,6 +15,7 @@
 
         
         <activity android:name=".SignUp"></activity>
+        <activity android:name=".LoginPage"></activity>
         <activity android:name=".MensclothGrid" />
         <activity
             android:name=".SplashScreen"

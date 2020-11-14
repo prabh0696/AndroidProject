@@ -77,7 +77,7 @@ public class SignUp extends AppCompatActivity {
                 if(task.isSuccessful()){
                     Toast.makeText(SignUp.this,"Sign Up successfully",Toast.LENGTH_LONG).show();
 
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(),LoginPage.class));
                 }else {
                     Toast.makeText(SignUp.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
@@ -88,7 +88,9 @@ public class SignUp extends AppCompatActivity {
         });
 
 
-        link.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),MainActivity.class)));
+        link.setOnClickListener(v -> {
+            startActivity(new Intent(getApplicationContext(), LoginPage.class));
+        });
 
     }
 }

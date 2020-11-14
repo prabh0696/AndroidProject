@@ -22,7 +22,7 @@ public class LoginPage extends AppCompatActivity {
 
     EditText Email,Password;
     Button Login;
-    TextView link,adminlink,userlink;
+    TextView link;
     FirebaseAuth auth;
     ProgressBar progressBar;
 
@@ -41,58 +41,47 @@ public class LoginPage extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
-        Login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = Email.getText().toString().trim();
-                String password = Password.getText().toString().trim();
+        Login.setOnClickListener(v -> {
+            String email = Email.getText().toString().trim();
+            String password = Password.getText().toString().trim();
 
-                if(TextUtils.isEmpty(email)){
+            if(TextUtils.isEmpty(email)){
 
-                    Email.setError("Email is required");
-                    return;
+                Email.setError("Email is required");
+                return;
 
-                }
-                if(TextUtils.isEmpty(password)){
-
-                    Password.setError("Password is required");
-                    return;
-
-                }
-                if(password.length()<6){
-
-                    Password.setError("Password must contain six characters");
-                    return;
-
-                }
-
-                progressBar.setVisibility(View.VISIBLE);
-
-                auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(LoginPage.this,"Sign In Successfully",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-
-                        }else {
-                            Toast.makeText(LoginPage.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
-
-                        }
-                    }
-                });
             }
+            if(TextUtils.isEmpty(password)){
+
+                Password.setError("Password is required");
+                return;
+
+            }
+            if(password.length()<6){
+
+                Password.setError("Password must contain six characters");
+                return;
+
+            }
+
+            progressBar.setVisibility(View.VISIBLE);
+
+            auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
+                if(task.isSuccessful()){
+                    Toast.makeText(LoginPage.this,"Sign In Successfully",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+
+                }else {
+                    Toast.makeText(LoginPage.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+
+                }
+            });
         });
 
 
 
 
-        link.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),SignUp.class));
-            }
-        });
+        link.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),SignUp.class)));
     }
 }
