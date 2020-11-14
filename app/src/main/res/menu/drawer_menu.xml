@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@drawable/ic_aboutus"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/nav_myprofile"
+            android:icon="@drawable/ic_profile"
+            android:title="My Profile" />
+
+    </group>
+    <item
+
+        android:title="Categories">
+
+        <menu>
+            <item
+                android:id="@+id/nav_mens"
+
+                android:title="Mens" />
+            <item
+                android:id="@+id/nav_womens"
+
+                android:title="Womens" />
+            <item
+                android:id="@+id/nav_kids"
+
+                android:title="Kids" />
+        </menu>
+
+    </item>
+
+    <item android:title="Want To Ask Something?">
+        <menu>
+            <item
+                android:id="@+id/nav_query"
+
+                android:title="Send Feedback" />
+        </menu>
+    </item>
+    <item android:title="How To Contact Us?">
+        <menu>
+            <item
+                android:id="@+id/nav_contactus"
+
+                android:title="Contact Us" />
+        </menu>
+    </item>
+    <item android:title="Connect On Social Network?">
+        <menu >
+            <item
+                android:id="@+id/nav_facebook"
+
+                android:title="Facebook Page" />
+            <item
+                android:id="@+id/nav_logout"
+
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
