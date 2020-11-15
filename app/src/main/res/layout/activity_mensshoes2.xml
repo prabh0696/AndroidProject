@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/bg"
     android:layout_weight="8"
-    tools:context=".menscloth2">
+    tools:context=".mensshoes2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         <ImageView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:src="@drawable/clothgrid3">
+            android:src="@drawable/shoe4">
         </ImageView>
     </LinearLayout>
     <LinearLayout
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="Style : Louis Tapestry DNA"
+            android:text="Style : Formals"
             android:textSize="22sp"
             android:textColor="@color/black"
             android:textStyle="bold">
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Brand : Louis Vuitton"
+            android:text="Brand : Redtape"
             android:textSize="22sp"
             android:textColor="@color/black"
             android:textStyle="bold">
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Colours : Black"
+            android:text="Colours : Brown"
             android:textSize="22sp"
             android:textColor="@color/black"
             android:textStyle="bold">
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Price : CDN$ 200"
+            android:text="Price : CDN$ 99"
             android:textSize="22sp"
             android:textColor="@color/black"
             android:textStyle="bold">

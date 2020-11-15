@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GiftProject">
-        <activity android:name=".menscloth2"></activity>
+        <activity android:name=".mensshoes2"></activity>
+        <activity android:name=".menscloth2" />
         <activity android:name=".mensshoesGrid" />
         <activity android:name=".SignUp" />
         <activity android:name=".MensclothGrid" />
