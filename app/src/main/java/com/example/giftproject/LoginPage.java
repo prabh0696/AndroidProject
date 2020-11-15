@@ -1,5 +1,8 @@
 package com.example.giftproject;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,18 +13,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SignUp extends AppCompatActivity {
+public class LoginPage extends AppCompatActivity {
 
-    EditText Name,Email,Password;
-    Button register;
+    EditText Email,Password;
+    Button Login;
     TextView link;
     FirebaseAuth auth;
     ProgressBar progressBar;
@@ -29,26 +29,19 @@ public class SignUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_login_page);
 
-        Name = findViewById(R.id.Name);
+
         Email = findViewById(R.id.Email);
         Password = findViewById(R.id.Password);
 
-        register = findViewById(R.id.SignUp);
-
-        link = findViewById(R.id.LoginLink);
+        Login =findViewById(R.id.SignIn);
+        link = findViewById(R.id.signuplink);
         progressBar = findViewById(R.id.progressBar);
 
         auth = FirebaseAuth.getInstance();
 
-        if(auth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
-
-        }
-
-        register.setOnClickListener(v -> {
+        Login.setOnClickListener(v -> {
             String email = Email.getText().toString().trim();
             String password = Password.getText().toString().trim();
 
@@ -70,27 +63,25 @@ public class SignUp extends AppCompatActivity {
                 return;
 
             }
+
             progressBar.setVisibility(View.VISIBLE);
 
-            auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
-
+            auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
                 if(task.isSuccessful()){
-                    Toast.makeText(SignUp.this,"Sign Up successfully",Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginPage.this,"Sign In Successfully",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
-                    startActivity(new Intent(getApplicationContext(),LoginPage.class));
                 }else {
-                    Toast.makeText(SignUp.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginPage.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
 
                 }
             });
-
         });
 
 
-        link.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), LoginPage.class));
-        });
 
+
+        link.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),SignUp.class)));
     }
 }
