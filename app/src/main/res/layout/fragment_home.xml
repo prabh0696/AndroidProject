@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:src="@drawable/womenn"
-            android:id="@+id/slide">
+            android:id="@+id/womenhome">
         </ImageView>
 
     </LinearLayout>
@@ -32,7 +32,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/slidee"
+                android:id="@+id/menhome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/m"></ImageView>
@@ -57,7 +57,7 @@
         android:layout_marginTop="-20dp">
 
         <ImageView
-            android:id="@+id/slideeu"
+            android:id="@+id/kidhome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/k"></ImageView>
