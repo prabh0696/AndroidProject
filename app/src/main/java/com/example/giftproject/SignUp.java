@@ -42,11 +42,7 @@ public class SignUp extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
-        if(auth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
 
-        }
 
         register.setOnClickListener(v -> {
             String email = Email.getText().toString().trim();
@@ -70,7 +66,7 @@ public class SignUp extends AppCompatActivity {
                 return;
 
             }
-            progressBar.setVisibility(View.VISIBLE);
+           progressBar.setVisibility(View.VISIBLE);
 
             auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
 
