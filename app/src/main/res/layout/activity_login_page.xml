@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundsignup"
+    android:background="@drawable/giftbg"
     tools:context=".LoginPage">
 
     <ImageView
         android:id="@+id/Opacityimage"
         android:layout_width="374dp"
         android:layout_height="511dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="10dp"
         android:background="#D2070707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
