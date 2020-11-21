@@ -69,7 +69,9 @@ public class LoginPage extends AppCompatActivity {
             auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
                 if(task.isSuccessful()){
                     Toast.makeText(LoginPage.this,"Sign In Successfully",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    Intent intent=new Intent(getApplicationContext(),userdetails.class);
+                    intent.putExtra("userEmail",email);
+                    startActivity(intent);
 
                 }else {
                     Toast.makeText(LoginPage.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
