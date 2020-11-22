@@ -22,16 +22,16 @@ public class WomenShoes extends AppCompatActivity {
         setContentView(R.layout.activity_women_clothing);
 
         womenShoes = new ArrayList<>();
-        womenShoes.add(new Product("79.99","Women Clothing","Description",R.drawable.womenc1));
-        womenShoes.add(new Product("99","Women Clothing","Description",R.drawable.womenc2));
-        womenShoes.add(new Product("139.99","Women Clothing","Description ",R.drawable.womenc3));
-        womenShoes.add(new Product("89.59","Women Clothing","Description ",R.drawable.womenc4));
-        womenShoes.add(new Product("59","Women Clothing","Description ",R.drawable.womenc5));
-        womenShoes.add(new Product("76","Women Clothing","Description ",R.drawable.womenc6));
-        womenShoes.add(new Product("79.99","Women Clothing","Description ",R.drawable.womenc7));
-        womenShoes.add(new Product("55.99","Women Clothing","Description ",R.drawable.womenc8));
-        womenShoes.add(new Product("45.89","Women Clothing","Description ",R.drawable.womenc9));
-        womenShoes.add(new Product("89.99","Women Clothing","Description ",R.drawable.womenc10));
+        womenShoes.add(new Product("79.99","Women Shoes","Description",R.drawable.womens1));
+        womenShoes.add(new Product("89.99","Women Shoes","Description",R.drawable.womens2));
+        womenShoes.add(new Product("45","Women Shoes","Description ",R.drawable.womens3));
+        womenShoes.add(new Product("49","Women Shoes","Description ",R.drawable.womens4));
+        womenShoes.add(new Product("76","Women Shoes","Description ",R.drawable.womens5));
+        womenShoes.add(new Product("89.99","Women Shoes","Description ",R.drawable.womens6));
+        womenShoes.add(new Product("99","Women Shoes","Description ",R.drawable.womens7));
+        womenShoes.add(new Product("55","Women Shoes","Description ",R.drawable.womens8));
+        womenShoes.add(new Product("120","Women Shoes","Description ",R.drawable.womens9));
+        womenShoes.add(new Product("69","Women Shoes","Description ",R.drawable.womens10));
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         RecyclerViewAdapter myAdapter = new RecyclerViewAdapter(this,womenShoes);
