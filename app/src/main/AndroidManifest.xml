@@ -11,8 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GiftProject">
-        <activity android:name=".ProductItemDescription"></activity>
-        <activity android:name=".WomenAccessory" />
+        <activity android:name=".WomenAccessory"></activity>
         <activity android:name=".WomenShoes" />
         <activity android:name=".WomenClothing" />
         <activity
