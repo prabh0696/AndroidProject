@@ -2,35 +2,58 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.giftproject">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/Theme.GiftProject">
-        <activity android:name=".WomenAccessory"></activity>
+<<<<<<<<< Temporary merge branch 1
+        <activity android:name=".ProductItemDescription"></activity>
+        <activity android:name=".WomenAccessory" />
         <activity android:name=".WomenShoes" />
         <activity android:name=".WomenClothing" />
         <activity
             android:name=".userdetails"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity android:name=".feedback" />
+=========
+
+        <activity android:name=".mensshoes1"></activity>
+        
+
+        <activity android:name=".mensshoes2"></activity>
+        <activity android:name=".LoginPage"></activity>
+        <activity android:name=".menscloth2"></activity>
+
+=========
+
+        android:theme="@style/Theme.GiftProject" >
+        <activity android:name=".feedback" >
+        </activity>
+
+        <activity android:name=".userdetails"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
+
+>>>>>>>>> Temporary merge branch 2
         <activity android:name=".mensshoes1" />
         <activity android:name=".mensshoes2" />
         <activity android:name=".LoginPage" />
         <activity android:name=".menscloth2" />
+>>>>>>>>> Temporary merge branch 2
         <activity android:name=".mensshoesGrid" />
         <activity android:name=".SignUp" />
         <activity android:name=".MensclothGrid" />
         <activity
             android:name=".SplashScreen"
+
+            android:theme="@style/Theme.GiftProject.NoActionBar">
+=========
             android:theme="@style/Theme.Design.NoActionBar">
-            =========
-            android:theme="@style/Theme.GiftProject.NoActionBar" >
-            >>>>>>>>> Temporary merge branch 2
+
+>>>>>>>>> Temporary merge branch 2
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,5 +64,7 @@
             android:name=".MainActivity"
             android:theme="@style/Theme.GiftProject.NoActionBar" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
