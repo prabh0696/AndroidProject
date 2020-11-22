@@ -10,14 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GiftProject">
 
+        <activity android:name=".mensshoes1"></activity>
+        
 
-        
-        
+        <activity android:name=".mensshoes2"></activity>
         <activity android:name=".LoginPage"></activity>
+        <activity android:name=".menscloth2"></activity>
 
-        <activity android:name=".mensshoesGrid"></activity>
+        <activity android:name=".mensshoesGrid" />
         <activity android:name=".SignUp" />
-
         <activity android:name=".MensclothGrid" />
         <activity
             android:name=".SplashScreen"
