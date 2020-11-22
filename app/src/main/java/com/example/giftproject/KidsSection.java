@@ -61,9 +61,9 @@ public class KidsSection extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View hid= inflater.inflate(R.layout.fragment_kids_section, container, false);
-        ImageView boys=(ImageView) hid.findViewById(R.id.boys);
-        ImageView girls=(ImageView) hid.findViewById(R.id.girls);
+        final View view1= inflater.inflate(R.layout.fragment_kids_section, container, false);
+        ImageView boys=(ImageView) view1.findViewById(R.id.boys);
+        ImageView girls=(ImageView) view1.findViewById(R.id.girls);
 
         boys.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,5 +76,6 @@ public class KidsSection extends Fragment {
             Intent i=new Intent(getActivity(),GirlSection.class);
             startActivity(i);
         });
-        return hid;    }
+        return view1;
+    }
 }

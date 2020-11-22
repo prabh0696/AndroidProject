@@ -1,5 +1,6 @@
 package com.example.giftproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +61,25 @@ public class BoysSection extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_boys_section, container, false);
-    }
+        final View view1= inflater.inflate(R.layout.fragment_kids_section, container, false);
+        ImageView boyCloth=(ImageView) view1.findViewById(R.id.boysClothing);
+        ImageView boyAccessory=(ImageView) view1.findViewById(R.id.boysAccessory);
+        ImageView boyShoes=(ImageView) view1.findViewById(R.id.boysShoes);
+
+        boyCloth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getActivity(),BoysClothing.class);
+                startActivity(i);
+            }
+        });
+        boyAccessory.setOnClickListener(view -> {
+            Intent i=new Intent(getActivity(),BoysAccessory.class);
+            startActivity(i);
+        });
+        boyShoes.setOnClickListener(view -> {
+            Intent i=new Intent(getActivity(),BoysShoes.class);
+            startActivity(i);
+        });
+        return view1;      }
 }
