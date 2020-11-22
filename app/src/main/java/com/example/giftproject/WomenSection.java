@@ -87,5 +87,6 @@ public class WomenSection extends Fragment {
                 startActivity(i);
             }
         });
-        return view;    }
+        return view;
+    }
 }

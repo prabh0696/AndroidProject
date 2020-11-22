@@ -73,13 +73,20 @@ public class BoysSection extends Fragment {
                 startActivity(i);
             }
         });
-        boyAccessory.setOnClickListener(view -> {
-            Intent i=new Intent(getActivity(),BoysAccessory.class);
-            startActivity(i);
+        boyAccessory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getActivity(),BoysAccessory.class);
+                startActivity(i);
+            }
         });
-        boyShoes.setOnClickListener(view -> {
-            Intent i=new Intent(getActivity(),BoysShoes.class);
-            startActivity(i);
+        boyShoes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getActivity(),BoysShoes.class);
+                startActivity(i);
+            }
         });
-        return view1;      }
+        return view1;
+    }
 }

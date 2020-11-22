@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Aboutus">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" About Us "
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="30dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/register">
+    </TextView>
+    <me.biubiubiu.justifytext.library.JustifyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Giftbucket application serves all kinds of customers from children to adults. Customers can easily buy different kinds of products like clothing ,shoes and other accessories. The products are unique as they are provided from different countries and cultures .What could be better than having everything at one platform from across the world.Sometime you want to give something special and unique to your closed ones but you cannot always find those in local shops.At that time our application will do the work by helping you to find the perfect gift for loved ones ."
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:layout_margin="10dp">
+    </me.biubiubiu.justifytext.library.JustifyTextView>
+
+</LinearLayout>

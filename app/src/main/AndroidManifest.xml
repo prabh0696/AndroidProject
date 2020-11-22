@@ -2,44 +2,43 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.giftproject">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GiftProject">
-
-        <activity android:name=".loginType"
-            android:theme="@style/Theme.Design.NoActionBar"></activity>
-        <activity android:name=".ProductItemDescription"></activity>
+        <activity android:name=".MensnewCloth"></activity>
+        <activity android:name=".menscloth1" />
+        <activity
+            android:name=".loginType"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity android:name=".ProductItemDescription" />
         <activity android:name=".WomenAccessory" />
-
         <activity android:name=".WomenShoes" />
         <activity android:name=".WomenClothing" />
         <activity
             android:name=".userdetails"
             android:theme="@style/Theme.Design.NoActionBar" />
-
-        <activity android:name=".feedback"
-            android:theme="@style/Theme.Design.NoActionBar"/>
-
-
+        <activity
+            android:name=".feedback"
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity android:name=".mensshoes1" />
         <activity android:name=".mensshoes2" />
-        <activity android:name=".LoginPage"
-            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity
+            android:name=".LoginPage"
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity android:name=".menscloth2" />
         <activity android:name=".mensshoesGrid" />
-        <activity android:name=".SignUp"
-            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity
+            android:name=".SignUp"
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity android:name=".MensclothGrid" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.Design.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,7 +48,8 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.GiftProject.NoActionBar" />
-
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

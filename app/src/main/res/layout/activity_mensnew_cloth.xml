@@ -9,7 +9,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:layout_weight="8"
-        tools:context=".mensshoesGrid">
+    tools:context=".MensnewCloth">
         <RelativeLayout
             android:layout_weight="2"
             android:layout_width="match_parent"
@@ -18,7 +18,7 @@
 
             <TextView
                 android:id="@+id/textheading"
-                android:text="MENS SHOES"
+                android:text="MENS CLOTHES"
                 android:textStyle="bold"
                 android:textSize="34sp"
                 android:textColor="@android:color/black"
@@ -49,28 +49,8 @@
                     >
                     <ImageView android:layout_width="wrap_content"
                         android:layout_height="150dp"
-                        android:src="@drawable/shoe3"
-                        >
-                    </ImageView>
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="@color/black"
-                        android:text="Vans Sneakers"
-                        android:textSize="20sp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        android:gravity="center">
-                    </TextView>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageView android:layout_width="wrap_content"
-                        android:layout_height="150dp"
-                        android:src="@drawable/shoe2"
+                        android:src="@drawable/clothgrid1"
+                        android:id="@+id/menc1"
                         >
                     </ImageView>
                     <TextView
@@ -84,6 +64,27 @@
                         android:gravity="center">
                     </TextView>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageView android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:src="@drawable/clothgrid2"
+                        >
+                    </ImageView>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black"
+                        android:text="Burberry Original"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:gravity="center">
+                    </TextView>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
 
@@ -92,7 +93,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
-
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -101,15 +101,15 @@
                     >
                     <ImageView android:layout_width="wrap_content"
                         android:layout_height="150dp"
-                        android:src="@drawable/shoe5"
-                        android:id="@+id/mensh5"
+                        android:src="@drawable/clothgrid3"
+                        android:id="@+id/menc3"
                         >
                     </ImageView>
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:background="@color/black"
-                        android:text="Timberland Hard"
+                        android:text="Louis Vuitton"
                         android:textSize="20sp"
                         android:layout_gravity="center"
                         android:textColor="@color/white"
@@ -123,67 +123,65 @@
                     android:layout_weight="1">
                     <ImageView android:layout_width="wrap_content"
                         android:layout_height="150dp"
-                        android:src="@drawable/shoe6"
+                        android:src="@drawable/clothgrid4"
+                        >
+                    </ImageView>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black"
+                        android:text="Old Navy Formal"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:gravity="center">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageView android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:src="@drawable/clothgrid5"
+                        >
+                    </ImageView>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black"
+                        android:text="Adidas Trouser"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:gravity="center">
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageView android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:src="@drawable/clothgrid6"
                         >
                     </ImageView>
                     <TextView
                         android:layout_width="156dp"
                         android:layout_height="wrap_content"
                         android:background="@color/black"
-                        android:text="Reebok Original"
-                        android:textSize="20sp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        android:gravity="center">
-                    </TextView>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    >
-                    <ImageView android:layout_width="wrap_content"
-                        android:layout_height="150dp"
-                        android:src="@drawable/shoe2"
-                        >
-                    </ImageView>
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="@color/black"
-                        android:text="Adidas Black"
-                        android:textSize="20sp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        android:gravity="center">
-                    </TextView>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <ImageView android:layout_width="wrap_content"
-                        android:layout_height="150dp"
-                        android:src="@drawable/shoe4"
-                        android:id="@+id/mensh4"
-                        >
-                    </ImageView>
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="@color/black"
-                        android:text="Redtape Formals"
+                        android:text="Owl Hoodie"
                         android:textSize="20sp"
                         android:layout_gravity="center"
                         android:textColor="@color/white"
@@ -193,5 +191,5 @@
             </LinearLayout>
 
         </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>

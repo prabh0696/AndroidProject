@@ -7,13 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class menscloth2 extends AppCompatActivity {
+public class menscloth1 extends AppCompatActivity {
     TextView returnHome;
     TextView returnProducts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menscloth2);
+        setContentView(R.layout.activity_menscloth1);
 
         returnHome=findViewById(R.id.home_btn);
         returnProducts=findViewById(R.id.products_btn);

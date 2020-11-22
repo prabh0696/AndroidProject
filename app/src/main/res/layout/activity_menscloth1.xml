@@ -7,8 +7,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:layout_weight="8"
-    tools:context=".menscloth2">
-
+    tools:context=".menscloth1">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -19,7 +18,7 @@
         <ImageView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:src="@drawable/clothgrid3">
+            android:src="@drawable/clothgrid1">
         </ImageView>
     </LinearLayout>
     <LinearLayout
@@ -33,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="Style : Louis Tapestry DNA"
+            android:text="Style : Black Stripes"
             android:textSize="22sp"
             android:textColor="@color/black"
             android:textStyle="bold">
@@ -43,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Brand : Louis Vuitton"
+            android:text="Brand : Adidas"
             android:textSize="22sp"
             android:textColor="@color/black"
             android:textStyle="bold">
@@ -53,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Colours : Black"
+            android:text="Colours : White,Black"
             android:textSize="22sp"
             android:textColor="@color/black"
             android:textStyle="bold">
@@ -73,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Price : CDN$ 200"
+            android:text="Price : CDN$ 99"
             android:textSize="22sp"
             android:textColor="@color/black"
             android:textStyle="bold">
