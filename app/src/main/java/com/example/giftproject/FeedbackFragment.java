@@ -2,11 +2,22 @@ package com.example.giftproject;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.giftproject.models.Feedbacks;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +34,16 @@ public class FeedbackFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    EditText fEmail;
+    EditText fName;
+    EditText fPhone;
+    EditText fProduct;
+    EditText fQuery;
+    Button submit_btn;
+    String userID;
+    FirebaseFirestore db;
+    FirebaseAuth fAuth;
 
     public FeedbackFragment() {
         // Required empty public constructor
@@ -59,6 +80,47 @@ public class FeedbackFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_feedback, container, false);
+        View hid= inflater.inflate(R.layout.fragment_feedback, container, false);
+
+        fEmail=hid.findViewById(R.id.Email);
+        fName=hid.findViewById(R.id.Name);
+        fPhone=hid.findViewById(R.id.phone);
+        fProduct=hid.findViewById(R.id.product);
+        fQuery=hid.findViewById(R.id.query);
+        submit_btn=hid.findViewById(R.id.submitBtn);
+        db= FirebaseFirestore.getInstance();
+        fAuth = FirebaseAuth.getInstance();
+
+        submit_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = fEmail.getText().toString().trim();
+                String Name=fName.getText().toString();
+                String phone=fPhone.getText().toString();
+                String product=fProduct.getText().toString();
+                String query=fQuery.getText().toString();
+                addData(email,Name,phone,product,query);
+            }
+        });
+        return hid;
     }
+    public void addData(String fEmail,String fName,String fPhone,String fProduct,String fQuery){
+        Feedbacks feedbacks=new Feedbacks(fEmail,fName,fPhone,fProduct,fQuery);
+        db.collection("Feedbacks")
+                .add(feedbacks)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        getFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                new HomeFragment()).commit();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getActivity(), "Error:"+e.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
 }
