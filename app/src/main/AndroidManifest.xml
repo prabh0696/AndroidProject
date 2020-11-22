@@ -10,10 +10,8 @@
         android:supportsRtl="true"
 
         android:theme="@style/Theme.GiftProject">
-        <activity android:name=".loginType"></activity>
-      
-
-
+        <activity android:name=".loginType"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
         <activity android:name=".ProductItemDescription"></activity>
         <activity android:name=".WomenAccessory" />
         <activity android:name=".WomenShoes" />
@@ -21,16 +19,19 @@
         <activity
             android:name=".userdetails"
             android:theme="@style/Theme.Design.NoActionBar" />
-        <activity android:name=".feedback" />
+        <activity android:name=".feedback"
+            android:theme="@style/Theme.Design.NoActionBar"/>
 
 
         <activity android:name=".mensshoes1" />
         <activity android:name=".mensshoes2" />
-        <activity android:name=".LoginPage" />
+        <activity android:name=".LoginPage"
+            android:theme="@style/Theme.Design.NoActionBar"/>
         <activity android:name=".menscloth2" />
 
         <activity android:name=".mensshoesGrid" />
-        <activity android:name=".SignUp" />
+        <activity android:name=".SignUp"
+            android:theme="@style/Theme.Design.NoActionBar"/>
         <activity android:name=".MensclothGrid" />
         <activity
             android:name=".SplashScreen"
