@@ -72,7 +72,6 @@ public class LoginPage extends AppCompatActivity {
                     Intent intent=new Intent(getApplicationContext(),userdetails.class);
                     intent.putExtra("userEmail",email);
                     startActivity(intent);
-
                 }else {
                     Toast.makeText(LoginPage.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
