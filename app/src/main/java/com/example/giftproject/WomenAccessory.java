@@ -18,7 +18,7 @@ public class WomenAccessory extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_women_clothing);
+        setContentView(R.layout.recyclerview_activity);
         womenAccessory = new ArrayList<>();
         womenAccessory.add(new Product("120","Women Accessory","Description",R.drawable.womena1));
         womenAccessory.add(new Product("150","Women Accessory","Description",R.drawable.womena2));

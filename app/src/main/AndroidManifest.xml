@@ -2,23 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.giftproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/Theme.GiftProject">
+
         <activity android:name=".loginType"
             android:theme="@style/Theme.Design.NoActionBar"></activity>
         <activity android:name=".ProductItemDescription"></activity>
         <activity android:name=".WomenAccessory" />
+
         <activity android:name=".WomenShoes" />
         <activity android:name=".WomenClothing" />
         <activity
             android:name=".userdetails"
             android:theme="@style/Theme.Design.NoActionBar" />
+
         <activity android:name=".feedback"
             android:theme="@style/Theme.Design.NoActionBar"/>
 
@@ -28,7 +32,6 @@
         <activity android:name=".LoginPage"
             android:theme="@style/Theme.Design.NoActionBar"/>
         <activity android:name=".menscloth2" />
-
         <activity android:name=".mensshoesGrid" />
         <activity android:name=".SignUp"
             android:theme="@style/Theme.Design.NoActionBar"/>
@@ -48,7 +51,5 @@
             android:theme="@style/Theme.GiftProject.NoActionBar" />
 
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

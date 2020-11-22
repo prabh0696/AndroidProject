@@ -65,6 +65,7 @@ public class HomeFragment extends Fragment {
         ImageView womenbtn=(ImageView)hid.findViewById(R.id.womenhome);
         ImageView kidsbtn=(ImageView)hid.findViewById(R.id.kidhome);
 
+
         menbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +73,7 @@ public class HomeFragment extends Fragment {
                         new Menshome()).commit();
             }
         });
+
 
         womenbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +90,7 @@ public class HomeFragment extends Fragment {
                         new KidsSection()).commit();
             }
         });
+
         return hid;
     }
 }
