@@ -62,7 +62,9 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         final View hid= inflater.inflate(R.layout.fragment_home, container, false);
         ImageView menbtn=(ImageView) hid.findViewById(R.id.menhome);
-        ImageView women=(ImageView) hid.findViewById(R.id.womenhome);
+        ImageView womenbtn=(ImageView)hid.findViewById(R.id.womenhome);
+        ImageView kidsbtn=(ImageView)hid.findViewById(R.id.kidhome);
+
 
         menbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,13 +74,23 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        women.setOnClickListener(new View.OnClickListener() {
+
+        womenbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new WomenSection()).commit();
             }
         });
+
+        kidsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new KidsSection()).commit();
+            }
+        });
+
         return hid;
     }
 }
