@@ -35,7 +35,9 @@
                 android:id="@+id/menhome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/m"></ImageView>
+                android:src="@drawable/m">
+
+            </ImageView>
         </LinearLayout>
 
         <LinearLayout
@@ -47,7 +49,9 @@
                 android:id="@+id/slideey"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/b"></ImageView>
+                android:src="@drawable/b">
+
+            </ImageView>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -60,7 +64,9 @@
             android:id="@+id/kidhome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/k"></ImageView>
+            android:src="@drawable/k">
+
+        </ImageView>
     </LinearLayout>
 
 </LinearLayout>
