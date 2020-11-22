@@ -129,7 +129,7 @@
 
 
     <Button
-        android:id="@+id/storeBtn"
+        android:id="@+id/submitBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -151,6 +151,6 @@
         android:textColor="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/storeBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/submitBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
