@@ -1,0 +1,32 @@
+
+\
+java:S1128"@Remove this unused import 'com.google.firebase.auth.AuthResult'.(âÂ8´õ©ÄÜ.
+i	java:S116"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ÕÅ¦üÿÿÿÿ
+j	java:S116"PRename this field "Email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ÕÅ¦üÿÿÿÿ
+|
+java:S1450"ZRemove the "progressBar" field and declare it as a local variable in the relevant methods.(â˜ˆçøÿÿÿÿ8 ÙÏÜ.
+m	java:S116"SRename this field "Password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ÕÅ¦üÿÿÿÿ
+[
+java:S1128">Remove this unused import 'com.google.android.gms.tasks.Task'.(¦âÏô8´õ©ÄÜ.
+I
+java:S1602V",Remove useless curly braces around statement(ıö±ú8Œ·´ÍÜ.
+>
+java:S1659"#Declare "Email" on a separate line.(„ÕÅ¦üÿÿÿÿ
+u
+java:S1450"SRemove the "link" field and declare it as a local variable in the relevant methods.(•òÀ³øÿÿÿÿ8‘™ÏÜ.
+t
+java:S1450"WRemove the "register" field and declare it as a local variable in the relevant methods.(†çæ½8¸­ÏÜ.
+A
+java:S1659"&Declare "Password" on a separate line.(„ÕÅ¦üÿÿÿÿ
+y
+java:S1450"WRemove the "Password" field and declare it as a local variable in the relevant methods.(„ÕÅ¦üÿÿÿÿ8ÙÅÏÜ.
+U
+java:S1128"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8´õ©ÄÜ.
+v
+java:S1450"TRemove the "Email" field and declare it as a local variable in the relevant methods.(„ÕÅ¦üÿÿÿÿ8ÙÅÏÜ.
+u
+java:S1450"SRemove the "Name" field and declare it as a local variable in the relevant methods.(„ÕÅ¦üÿÿÿÿ8ÙÅÏÜ.
+u
+java:S1450"SRemove the "auth" field and declare it as a local variable in the relevant methods.(Ú‡›æøÿÿÿÿ8‘™ÏÜ.
+n
+java:S1128"LRemove this unused import 'com.google.android.gms.tasks.OnCompleteListener'.(Çğ¸Òÿÿÿÿÿ8´õ©ÄÜ.

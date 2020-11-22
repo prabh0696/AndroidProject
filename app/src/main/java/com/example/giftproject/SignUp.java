@@ -10,21 +10,18 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUp extends AppCompatActivity {
 
-    EditText Name,Email,Password;
-    Button register;
-    TextView link;
-    FirebaseAuth auth;
-    ProgressBar progressBar;
+    private EditText Name,Email,Password;
+    private Button register;
+   private TextView link;
+   private FirebaseAuth auth;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,10 +79,11 @@ public class SignUp extends AppCompatActivity {
             });
 
         });
-
-
-        link.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), LoginPage.class));
+        link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), LoginPage.class));
+            }
         });
 
     }
