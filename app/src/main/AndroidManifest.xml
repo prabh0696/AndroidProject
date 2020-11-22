@@ -9,18 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GiftProject">
-        <activity android:name=".userdetails"
-            android:theme="@style/Theme.Design.NoActionBar"></activity>
-        <activity android:name=".mensshoes1" />
-        <activity android:name=".mensshoes2" />
-        <activity android:name=".LoginPage" />
-        <activity android:name=".menscloth2" />
+
+        <activity android:name=".mensshoes1"></activity>
+        
+
+        <activity android:name=".mensshoes2"></activity>
+        <activity android:name=".LoginPage"></activity>
+        <activity android:name=".menscloth2"></activity>
+
         <activity android:name=".mensshoesGrid" />
         <activity android:name=".SignUp" />
         <activity android:name=".MensclothGrid" />
         <activity
             android:name=".SplashScreen"
-            android:theme="@style/Theme.Design.NoActionBar">
+            android:theme="@style/Theme.GiftProject.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,10 +31,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.GiftProject.NoActionBar" >
-
-        </activity>
-
+            android:theme="@style/Theme.GiftProject.NoActionBar" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
