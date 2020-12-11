@@ -42,6 +42,7 @@ public class SignUp extends AppCompatActivity {
 
 
         register.setOnClickListener(v -> {
+            String name = Name.getText().toString();
             String email = Email.getText().toString().trim();
             String password = Password.getText().toString().trim();
 
@@ -69,8 +70,11 @@ public class SignUp extends AppCompatActivity {
 
                 if(task.isSuccessful()){
                     Toast.makeText(SignUp.this,"Sign Up successfully",Toast.LENGTH_LONG).show();
-
-                    startActivity(new Intent(getApplicationContext(),LoginPage.class));
+                    Intent intent=new Intent(getApplicationContext(),retrouserpost.class);
+                    intent.putExtra("userName",name);
+                    intent.putExtra("userEmail",email);
+                    intent.putExtra("userPassword",password);
+                    startActivity(intent);
                 }else {
                     Toast.makeText(SignUp.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
