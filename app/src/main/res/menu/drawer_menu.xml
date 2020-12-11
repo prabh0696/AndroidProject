@@ -25,13 +25,13 @@
 
         <menu>
             <item
-                android:id="@+id/nav_mens"
-
-                android:title="Mens" />
-            <item
                 android:id="@+id/nav_womens"
 
                 android:title="Womens" />
+            <item
+                android:id="@+id/nav_mens"
+
+                android:title="Mens" />
             <item
                 android:id="@+id/nav_kids"
 

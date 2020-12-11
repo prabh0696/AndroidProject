@@ -19,7 +19,7 @@ public class WomenClothing extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_women_clothing);
+        setContentView(R.layout.recyclerview_activity);
 
 
 

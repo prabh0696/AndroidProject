@@ -1,6 +1,5 @@
 package com.example.giftproject;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,14 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link KidsSection#newInstance} factory method to
+ * Use the {@link Aboutus#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class KidsSection extends Fragment {
+public class Aboutus extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +24,7 @@ public class KidsSection extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public KidsSection() {
+    public Aboutus() {
         // Required empty public constructor
     }
 
@@ -36,11 +34,11 @@ public class KidsSection extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment KidsSection.
+     * @return A new instance of fragment Aboutus.
      */
     // TODO: Rename and change types and number of parameters
-    public static KidsSection newInstance(String param1, String param2) {
-        KidsSection fragment = new KidsSection();
+    public static Aboutus newInstance(String param1, String param2) {
+        Aboutus fragment = new Aboutus();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,18 +59,6 @@ public class KidsSection extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view1= inflater.inflate(R.layout.fragment_kids_section, container, false);
-
-        ImageView girls=(ImageView) view1.findViewById(R.id.girls);
-
-
-        girls.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new GirlSection()).commit();
-            }
-        });
-        return view1;
+        return inflater.inflate(R.layout.fragment_aboutus, container, false);
     }
 }

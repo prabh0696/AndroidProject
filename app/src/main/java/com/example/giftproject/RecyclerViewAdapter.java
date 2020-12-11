@@ -45,7 +45,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
 
                 Intent intent = new Intent(mContext, ProductItemDescription.class);
-
                 intent.putExtra("Price",mData.get(position).getPrice());
                 intent.putExtra("Description",mData.get(position).getDescription());
                 intent.putExtra("Category",mData.get(position).getCategory());

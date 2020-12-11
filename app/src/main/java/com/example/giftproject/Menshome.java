@@ -62,14 +62,16 @@ public class Menshome extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View hid= inflater.inflate(R.layout.fragment_menshome, container, false);
-        ImageView clothbtn=(ImageView) hid.findViewById(R.id.mensclothes);
 
-            clothbtn.setOnClickListener(new View.OnClickListener() {
+        ImageView shoesbtn=(ImageView)hid.findViewById(R.id.mensshoes);
+
+
+            shoesbtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i=new Intent(getActivity(),MensclothGrid.class);
+                    Intent i=new Intent(getActivity(),mensshoesGrid.class);
                     startActivity(i);
-                        }
+                }
             });
         return hid;
     }
