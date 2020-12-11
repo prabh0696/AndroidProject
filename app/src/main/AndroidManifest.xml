@@ -10,11 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GiftProject">
+
+        <activity android:name=".retrouserpost"></activity>
+        
+
         <activity android:name=".MensnewCloth"></activity>
         <activity android:name=".menscloth1" />
         <activity
             android:name=".loginType"
             android:theme="@style/Theme.Design.NoActionBar" />
+
         <activity android:name=".ProductItemDescription" />
         <activity android:name=".WomenAccessory" />
         <activity android:name=".WomenShoes" />
@@ -22,9 +27,12 @@
         <activity
             android:name=".userdetails"
             android:theme="@style/Theme.Design.NoActionBar" />
+
+
         <activity
             android:name=".feedback"
             android:theme="@style/Theme.Design.NoActionBar" />
+
         <activity android:name=".mensshoes1" />
         <activity android:name=".mensshoes2" />
         <activity
