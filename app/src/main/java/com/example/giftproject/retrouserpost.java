@@ -33,40 +33,5 @@ public class retrouserpost extends AppCompatActivity {
         //createUsers();
     }
 
-    public void createUsers(){
-        RegisterUsers registerUsers=new RegisterUsers(uname,uemail,upassword);
 
-        Retrofit retrofit=new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:3000/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        MyJsonApi myJsonApi=retrofit.create(MyJsonApi.class);
-
-        Call<RegisterUsers> call= myJsonApi.createUsers(registerUsers);
-
-        call.enqueue(new Callback<RegisterUsers>() {
-            @Override
-            public void onResponse(Call<RegisterUsers> call, Response<RegisterUsers> response) {
-                if(!response.isSuccessful()){
-                    textviewresult.setText("Code: "+response.code());
-                }
-                RegisterUsers postResponse=response.body();
-
-                String content="";
-                content += "Code: "+response.code()+"\n";
-                content += "ID: "+postResponse.getId()+"\n";
-                content += "Name: "+postResponse.getName()+"\n";
-                content += "Email: "+postResponse.getEmail()+"\n";
-                content += "Password: "+postResponse.getPassword()+"\n";
-
-                textviewresult.setText(content);
-            }
-
-            @Override
-            public void onFailure(Call<RegisterUsers> call, Throwable t) {
-                textviewresult.setText(t.getMessage());
-            }
-        });
-    }
 }
