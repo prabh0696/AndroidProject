@@ -2,6 +2,7 @@ package com.example.giftproject.api_interfaces;
 
 import com.example.giftproject.models.Profile;
 import com.example.giftproject.models.RegisterUsers;
+import com.example.giftproject.models.UserFeedback;
 
 import java.util.List;
 
@@ -17,4 +18,7 @@ public interface MyJsonApi {
 
     @GET("/profile/")
     Call<List<Profile>> getProfiles();
+
+    @GET("/feedback/")
+    Call<List<UserFeedback>> getFeedbacks();
 }
