@@ -1,5 +1,6 @@
 package com.example.giftproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -41,7 +42,11 @@ public class FeedbackFragment extends Fragment {
     EditText fProduct;
     EditText fQuery;
     Button submit_btn;
-    String userID;
+    String name;
+    String email;
+    String phone;
+    String product;
+    String query;
     FirebaseFirestore db;
     FirebaseAuth fAuth;
 
@@ -94,12 +99,12 @@ public class FeedbackFragment extends Fragment {
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = fEmail.getText().toString().trim();
-                String Name=fName.getText().toString();
-                String phone=fPhone.getText().toString();
-                String product=fProduct.getText().toString();
-                String query=fQuery.getText().toString();
-                addData(email,Name,phone,product,query);
+                 email = fEmail.getText().toString().trim();
+                 name=fName.getText().toString();
+                 phone=fPhone.getText().toString();
+                 product=fProduct.getText().toString();
+                 query=fQuery.getText().toString();
+                addData(email,name,phone,product,query);
             }
         });
         return hid;
@@ -111,8 +116,15 @@ public class FeedbackFragment extends Fragment {
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        getFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                new HomeFragment()).commit();
+                       // getFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
+                        Intent intent=new Intent(getActivity(),RetrofitFeedbackInsert.class);
+                        intent.putExtra("fname",name);
+                        intent.putExtra("femail",email);
+                        intent.putExtra("fphone",phone);
+                        intent.putExtra("fproduct",product);
+                        intent.putExtra("ffeedback",query);
+                        Toast.makeText(getActivity(), "Feedback Saved Successfully", Toast.LENGTH_LONG).show();
+                        startActivity(intent);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
