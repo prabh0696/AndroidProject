@@ -10,7 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GiftProject">
+
         <activity android:name=".RetrofitFeedbackInsert"></activity>
+
+        <activity android:name=".RetrofitProfileInsert"></activity>
+
         <activity android:name=".RetrofitFeedbackShow" />
         <activity android:name=".AdminMainPage" />
         <activity android:name=".RetroProfilePost" />

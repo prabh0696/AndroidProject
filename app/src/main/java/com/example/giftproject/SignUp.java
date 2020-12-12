@@ -70,7 +70,7 @@ public class SignUp extends AppCompatActivity {
 
                 if(task.isSuccessful()){
                     Toast.makeText(SignUp.this,"Sign Up successfully",Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(getApplicationContext(),retrouserpost.class);
+                    Intent intent=new Intent(getApplicationContext(),LoginPage.class);
                     intent.putExtra("userName",name);
                     intent.putExtra("userEmail",email);
                     intent.putExtra("userPassword",password);
