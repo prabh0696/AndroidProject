@@ -34,8 +34,8 @@ public class AdminLogin extends AppCompatActivity {
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = Email.getText().toString().trim();
-                String password = Password.getText().toString().trim();
+                String email = Email.getText().toString();
+                String password = Password.getText().toString();
 
                 if(TextUtils.isEmpty(email)){
 
@@ -50,9 +50,9 @@ public class AdminLogin extends AppCompatActivity {
 
                 }
                 progressBar.setVisibility(View.VISIBLE);
-                if(email=="admin1@gmail.com" && password =="admin"){
+                if(email.equals("admin1@gmail.com") && password.equals("admin")){
                     Toast.makeText(AdminLogin.this,"Sign In Successfully",Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(getApplicationContext(),loginType.class);
+                    Intent intent=new Intent(getApplicationContext(),RetroProfilePost.class);
                     startActivity(intent);
                 }
                 else{

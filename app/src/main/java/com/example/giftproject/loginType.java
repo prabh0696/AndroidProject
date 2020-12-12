@@ -25,5 +25,13 @@ public class loginType extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        adminlogin_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),AdminLogin.class);
+                startActivity(i);
+            }
+        });
     }
 }

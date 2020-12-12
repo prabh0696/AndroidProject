@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GiftProject">
-        <activity android:name=".AdminLogin"></activity>
+        <activity android:name=".RetroProfilePost"></activity>
+        <activity android:name=".AdminLogin" />
         <activity android:name=".retrouserpost" />
         <activity android:name=".MensnewCloth" />
         <activity android:name=".menscloth1" />
