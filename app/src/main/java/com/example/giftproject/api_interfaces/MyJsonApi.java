@@ -21,4 +21,7 @@ public interface MyJsonApi {
 
     @GET("/feedback/")
     Call<List<UserFeedback>> getFeedbacks();
+
+    @POST("/feedback/")
+    Call<UserFeedback> createFeedbacks(@Body UserFeedback userFeedback);
 }
