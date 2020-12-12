@@ -19,6 +19,9 @@ public interface MyJsonApi {
     @GET("/profile/")
     Call<List<Profile>> getProfiles();
 
+    @POST("/profile/")
+    Call<Profile> createProfiles(@Body Profile profile);
+
     @GET("/feedback/")
     Call<List<UserFeedback>> getFeedbacks();
 }

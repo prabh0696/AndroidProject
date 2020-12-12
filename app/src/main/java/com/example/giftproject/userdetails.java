@@ -31,6 +31,14 @@ public class userdetails extends AppCompatActivity {
     Button store_details;
     TextView skip_btn;
     String userID;
+    String name;
+    String email;
+    String phone;
+    String address;
+    String city;
+    String province;
+    String country;
+    String postal;
     FirebaseFirestore db;
     FirebaseAuth fAuth;
     @Override
@@ -63,15 +71,15 @@ public class userdetails extends AppCompatActivity {
         store_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = userEmail.getText().toString().trim();
-                String Name=userName.getText().toString();
-                String phone=userPhone.getText().toString();
-                String address=userAddress.getText().toString();
-                String city=userCity.getText().toString();
-                String province=userProvince.getText().toString();
-                String country=userCountry.getText().toString();
-                String postal=userPostal.getText().toString();
-                addData(email,Name,phone,address,city,province,country,postal);
+                 email = userEmail.getText().toString().trim();
+                 name=userName.getText().toString();
+                 phone=userPhone.getText().toString();
+                 address=userAddress.getText().toString();
+                 city=userCity.getText().toString();
+                 province=userProvince.getText().toString();
+                 country=userCountry.getText().toString();
+                 postal=userPostal.getText().toString();
+                addData(email,name,phone,address,city,province,country,postal);
             }
         });
 
@@ -94,9 +102,17 @@ public class userdetails extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                        Intent intent=new Intent(getApplicationContext(),RetrofitProfileInsert.class);
+                        intent.putExtra("uname",name);
+                        intent.putExtra("uemail",email);
+                        intent.putExtra("uphone",phone);
+                        intent.putExtra("uaddress",address);
+                        intent.putExtra("ucity",city);
+                        intent.putExtra("uprovince",province);
+                        intent.putExtra("ucountry",country);
+                        intent.putExtra("upostal",postal);
                         Toast.makeText(getApplicationContext(), "User Details Saved", Toast.LENGTH_LONG).show();
-                        startActivity(i);
+                        startActivity(intent);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override

@@ -52,7 +52,7 @@ public class AdminLogin extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 if(email.equals("admin1@gmail.com") && password.equals("admin")){
                     Toast.makeText(AdminLogin.this,"Sign In Successfully",Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(getApplicationContext(),RetroProfilePost.class);
+                    Intent intent=new Intent(getApplicationContext(),AdminMainPage.class);
                     startActivity(intent);
                 }
                 else{
